@@ -1,4 +1,15 @@
+.exercise-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
 .legal-header {
+  position: fixed;
   background-color: #e2e2e2;
   padding: 30px;
   margin-top: 60px;
@@ -12,31 +23,54 @@
 }
 
 main {
+  padding-top: 60px;
+  background-color: #1c1d26;
 }
 
 section {
-  display: flex;
-  gap: 30px;
-  position: relative;
+  display: block;
   border-bottom: 1px solid grey;
   padding: 30px;
+  padding-bottom: 100px;
   max-width: 900px;
   margin: 0 auto;
+  background-color: #1c1d26;
   color: white;
 }
 
+h1 {
+  position: relative;
+  z-index: 999;
+  background-color: #e2e2e2;
+}
+
 .section-label {
-  width: 100%;
+  position: sticky;
+  top: 180px;
+  align-self: flex-start;
+  width: 200px;
   background-color: #2b2d3b;
   height: max-content;
   padding: 10px 16px;
+  color: white;
+  z-index: 0;
+}
+
+section:last-of-type {
+  padding-bottom: 250px;
+}
+
+section:first-of-type {
+  padding-top: 120px;
 }
 
 .document-content {
+  flex: 1;
   display: flex;
+  margin-left: 200px;
   flex-direction: column;
-  gap: 30px;
-  max-width: 600px;
+  gap: 20px;
+  color: white;
 }
 
 .document-content p {
@@ -53,12 +87,15 @@ section {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
   display: flex;
   align-items: center;
   width: 100%;
   background-color: #e2e2e2;
   padding: 0 30px;
   min-height: 70px;
+  z-index: 9999;
 }
 
 .footer-content {
